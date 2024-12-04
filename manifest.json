@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SmartRead",
+  "version": "1.0",
+  "description": "Fetches definitions for hovered words using AI.",
+  "permissions": ["activeTab", "scripting","storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]  
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+
+    
+  }
+}
